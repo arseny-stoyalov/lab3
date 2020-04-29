@@ -51,7 +51,7 @@ public class AStarApp {
      * modifying the cells based on the mouse button state and the initial edit
      * that was performed.
      **/
-    private class MapCellHandler implements MouseListener {
+    private static class MapCellHandler implements MouseListener {
         /**
          * This value will be true if a mouse button has been pressed and we are
          * currently in the midst of a modification operation.
