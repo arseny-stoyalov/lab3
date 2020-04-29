@@ -1,5 +1,7 @@
 package com.company.components;
 
+import java.util.Objects;
+
 /**
  * This class represents a specific location in a 2D map.  Coordinates are
  * integer values.
@@ -30,4 +32,19 @@ public class Location {
     public Location() {
         this(0, 0);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Location location = (Location) o;
+        return xCoord == location.xCoord &&
+                yCoord == location.yCoord;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(xCoord, yCoord);
+    }
+
 }
